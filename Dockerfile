@@ -4,6 +4,7 @@ COPY ./output/serving_model /models/news-topic-classification-model
 COPY ./config/prometheus.config /config/prometheus.config
 
 ENV MODEL_NAME=news-topic-classification-model
+ENV PORT=8501
 
 CMD ["sh", "-c", "tensorflow_model_server \
 --port=8500 \
